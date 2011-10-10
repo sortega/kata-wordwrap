@@ -21,12 +21,8 @@ public class WordWrap {
     private String wrap(TextTokenizer text) {
         while(text.hasNext())
             addWord(text.next());
-        endLastLine();
+        newLine();
         return out;
-    }
-
-    private void endLastLine() {
-        out += "\n";
     }
 
     private void addWord(String word) {
